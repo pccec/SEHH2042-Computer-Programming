@@ -6,6 +6,8 @@
 // Insert more header files when necessary
 // =======================================
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 void showInfo()
@@ -19,10 +21,13 @@ void showInfo()
 void Q1()
 {
 	// declare variables
-	int guess, ans = 31;
+	int guess;
+	srand(time(NULL));
+	int ans = rand() % 100 + 1;
 
 	// prompt for user input
 	cout << "I have a number between 1 and 100.\nCan you guess my number?\n";
+	// cout << ans;
 
 	// display result
 	do
