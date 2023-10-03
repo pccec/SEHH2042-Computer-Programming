@@ -52,7 +52,7 @@ void Q2()
 	cout << fixed << right;
 
 	// display result
-	cout << setw(10) << "2";
+	cout << setw(5) << "2";
 	for (int input = 0; input < n; input++)
 	{
 		if (counter == 10)
@@ -72,7 +72,7 @@ void Q2()
 			}
 			if (notPrime == 0)
 			{
-				cout << setw(10) << input;
+				cout << setw(5) << input;
 				counter++;
 			}
 		}
@@ -107,82 +107,75 @@ void Q4()
 {
 	// declare variables;
 	int size;
-	char type;
 
 	// prompt for user input
 	cout << "Pattern size: ";
 	cin >> size;
-	cout << "Pattern type (a-e): ";
-	cin >> type;
 
 	// display result;
-	switch (type)
+	cout << "(a)\n";
+	for (int i = 1; i <= size; i++)
 	{
-	case 'a':
-		for (int i = 1; i <= size; i++)
+		for (int j = 1; j <= size; j++)
 		{
-			for (int j = 1; j <= size; j++)
-			{
-				if (i == 1 || i == size || j == 1 || j == size)
-					cout << "*";
-				else
-					cout << " ";
-			}
-			cout << endl;
+			if (i == 1 || i == size || j == 1 || j == size)
+				cout << "*";
+			else
+				cout << " ";
 		}
-		break;
-	case 'b':
-		for (int i = 1; i <= size; i++)
+		cout << endl;
+	}
+
+	cout << "\n(b)\n";
+	for (int i = 1; i <= size; i++)
+	{
+		for (int j = 1; j <= size; j++)
 		{
-			for (int j = 1; j <= size; j++)
-			{
-				if (i == 1 || i == j || i == size)
-					cout << "*";
-				else
-					cout << " ";
-			}
-			cout << endl;
+			if (i == 1 || i == j || i == size)
+				cout << "*";
+			else
+				cout << " ";
 		}
-		break;
-	case 'c':
-		for (int i = 1; i <= size; i++)
+		cout << endl;
+	}
+
+	cout << "\n(c)\n";
+	for (int i = 1; i <= size; i++)
+	{
+		for (int j = size - 1; j >= 1; j--)
 		{
-			for (int j = size - 1; j >= 1; j--)
-			{
-				if (i == 1 || i == j || i == size)
-					cout << "*";
-				else
-					cout << " ";
-			}
-			cout << endl;
+			if (i == 1 || i == j || i == size)
+				cout << "*";
+			else
+				cout << " ";
 		}
-		break;
-	case 'd':
-		for (int i = 1; i <= size; i++)
+		cout << endl;
+	}
+
+	cout << "\n(d)\n";
+	for (int i = 1; i <= size; i++)
+	{
+		for (int j = 1; j <= size; j++)
 		{
-			for (int j = 1; j <= size; j++)
-			{
-				if (i == 1 || i == size || i == j || i == size - j + 1)
-					cout << "*";
-				else
-					cout << " ";
-			}
-			cout << endl;
+			if (i == 1 || i == size || i == j || i == size - j + 1)
+				cout << "*";
+			else
+				cout << " ";
 		}
-		break;
-	case 'e':
-		for (int i = 1; i <= size; i++)
+		cout << endl;
+	}
+
+	cout << "\n(e)\n";
+	for (int i = 1; i <= size; i++)
+	{
+		for (int j = 1; j <= size; j++)
 		{
-			for (int j = 1; j <= size; j++)
-			{
-				if (i == 1 || i == size || j == 1 || j == size || i == j || i == size - j + 1)
-					cout << "*";
-				else
-					cout << " ";
-			}
-			cout << endl;
+			if (i == 1 || i == size || j == 1 || j == size || i == j || i == size - j + 1)
+				cout << "*";
+			else
+				cout << " ";
 		}
-		break;
+		cout << endl;
 	}
 }
 

@@ -55,6 +55,7 @@ void Q2()
 
 		degree += 10;
 	} while (degree <= 360);
+	cout << defaultfloat << noshowpos;
 }
 
 float integerPower(float base, int expo)
@@ -75,7 +76,7 @@ float integerPower(float base, int expo)
 void Q3()
 {
 	// declare variables
-	float base;
+	float base = 0;
 	int expo;
 
 	// prompt for user input
@@ -150,19 +151,25 @@ void Q4()
 {
 	int n = 9;
 	char c;
+
+	cout << "(a)\n";
 	right_tri(n);
 	cout << endl;
 
+	cout << "\n(b)\n";
 	left_tri(n);
 	cout << endl;
 
+	cout << "\n(c)\n";
 	top_tri(n);
 	cout << endl;
 
+	cout << "\n(d)\n";
 	top_tri(n);
 	bottom_tri(n);
 	cout << endl;
 
+	cout << "\n(e)\n";
 	top_tri(n);
 	top_tri(n);
 	top_tri(n);
